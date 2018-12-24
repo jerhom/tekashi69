@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #19201a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    z-index: 3;
+
+    .logo {
+        width: 50px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    nav {
+        align-self: center;
+
+        a {
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 0 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+
+#top-section {
+    position: relative;
+    height: 100vh;
+
+    .bluredbg {
+        background-image: linear-gradient(45deg, rgba(25, 32, 42, 1) 0%, rgba(25, 32, 42, 1) 33%, rgba(25, 32, 42, 0.96) 36%, rgba(25, 32, 42, 0.86) 43%, rgba(176, 38, 183, 0.57) 62%, rgba(125, 185, 232, 0) 100%), url('/img/top.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(40px) saturate(130%);
+        ;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .floating-img {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: absolute;
+        z-index: 2
+    }
+
+    .tekashi-img {
+        width: 30%;
+
+        img {
+            filter: contrast(150%);
+            width: 100%;
+        }
+    }
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#bio {
+    background: #000;
+    position: relative;
+    z-index: 3;
+    padding: 100px 0;
+
+    .container {
+        display: flex;
+
+        p {
+            color: #fff;
+            font-size: .9rem;
+            line-height: 1.5;
+            width: 50%;
+            padding: 0 50px;
+        }
+
+        .logo-centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            padding: 0 50px;
+        }
+    }
+}
+
+#media {
+    background-image: url('/img/bandana.jpeg');
+    padding: 100px 0;
+
+    .container {
+
+        .title {
+            background: #000;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-gap: 50px;
+            padding: 80px 50px 0;
+
+            .video {
+                border-radius: 4px;
+                overflow: hidden;
+                height: 300px;
+                -webkit-box-shadow: 0px 17px 33px 6px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 0px 17px 33px 6px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 17px 33px 6px rgba(0, 0, 0, 0.75);
+
+                iframe {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+#music {
+    padding: 80px 0;
+    position: relative;
+
+    .bluredbg {
+        background-image: linear-gradient(45deg, rgba(255, 253, 60, 1) 0%, rgba(255, 253, 60, 1) 33%, rgba(255, 253, 60, 0.96) 36%, rgba(255, 253, 60, 0.86) 43%, rgba(255, 253, 60, 0.20) 62%, rgba(255, 253, 60, 0) 100%), url('/img/album69.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(40px) saturate(130%);
+        ;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .container {
+        display: flex;
+        padding: 0 50px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .info {
+        width: 50%;
+
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .sub-title {
+            font-size: 1.7rem;
+            font-weight: 500;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 100px;
+        }
+
+        .singles {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            max-width: 400px;
+            margin: 0 auto;
+            margin-bottom: 80px;
+            text-align: center;
+
+            li {
+                font-size: 1.5rem;
+                font-weight: 300;
+                margin-bottom: 20px;
+            }
+        }
+
+        .logos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            text-align: center;
+
+            li {
+
+                img {
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .album-cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+#tour {
+    background: #000;
+    color: #fff;
+    position: relative;
+    z-index: 4;
+
+    .top-img {
+        background: url('/img/group.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        filter: saturate(0%) contrast(150%);
+        height: 300px;
+    }
+
+    .tourdates {
+        background: #000;
+        padding: 80px 0;
+
+        .title {
+            font-size: 1.8rem;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0 0 80px;
+        }
+
+        .dates {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 800px;
+
+            li {
+                
+                span{
+                  padding: 0 5px;
+                }
+
+                .city {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                .location {
+                    font-weight: 300;
+                }
+
+                .date {
+                    color: #f14848;
+                    font-weight: 500;
+                }
+
+            }
+        }
+    }
+}
+
+footer {
+    background: #1b1b1b;
+    color: #fff;
+    position: relative;
+    z-index: 4;
+    padding: 25px;
+    text-align: center;
+
+    img{
+      max-width: 45px;
+    }
+
+    a{
+      color: red;
+      text-decoration: none;
+    }
+}
